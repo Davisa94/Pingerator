@@ -4,6 +4,10 @@ src/dist
 src/build
 *.csv
 src/v3/PingerV5/venv/
+src/v3/distributable
 src/v3/PingerV5/build/
 src/v3/PingerV5/__pycache__/
 */__pycache__/
+src/v3/__pycache__/
+src/MultiMain.spec
+src/v3/PingerV5/MultiMain.spec
