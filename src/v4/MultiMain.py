@@ -4,8 +4,14 @@ import speedtest
 from modules import PingTest
 from modules import GlobalValues as GV
 from modules import FileManager as FM
-# Global Values
+##########################################################################
+# This is v4 of the ISP accountability suite which adds a speed test and
+# splits the project into a variety of files for portability.
+# Author: Austin Benitez
+# Internal Project Name: Pingerator
+##########################################################################
 
+# Global Values
 runningDir = os.path.dirname(__file__)
 class SpeedyTester:
     def __init__(self, desktop):
