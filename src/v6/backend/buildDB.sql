@@ -1,5 +1,31 @@
 use pingerator;
 
+-- Updated manualy
+-- ip lookup:
+    -- id
+    -- test_time_id fk > testtime table
+    -- domain name
+    -- 
+CREATE table ipLookup(
+    id SERIAL NOT NULL,
+    time_created TIMESTAMP NOT NULL,
+    ipv4 VARCHAR(15),
+    domain_name VARCHAR(80),
+    PRIMARY KEY(id),
+    UNIQUE(id));
+-- incidint table
+
+-- testtime table 
+    -- id primary
+    -- datetime
+    -- 
+
+CREATE table testTime(
+    id SERIAL NOT NULL,
+    datetime_tested TIMESTAMP NOT NULL,
+    PRIMARY KEY(id),
+    UNIQUE(test_time_id));
+
 -- We need a table for the speeds
     -- test_time_id fk > testtime table
     -- we need speed value
@@ -33,29 +59,3 @@ CREATE table pings (
     -- we need id of domain name given the appropriate IP
 
 
--- Updated manualy
--- ip lookup:
-    -- id
-    -- test_time_id fk > testtime table
-    -- domain name
-    -- 
-CREATE table ipLookup(
-    id SERIAL NOT NULL,
-    time_created TIMESTAMP NOT NULL,
-    ipv4 VARCHAR(15),
-    domain_name VARCHAR(80),
-    PRIMARY KEY(id),
-    UNIQUE(id));
--- incidint table
-
--- testtime table 
-    -- id primary
-    -- datetime
-    -- 
-
-CREATE table testTime(
-    id SERIAL NOT NULL,
-    datetime_tested TIMESTAMP NOT NULL,
-    PRIMARY KEY(id),
-    UNIQUE(test_time_id));
-)
