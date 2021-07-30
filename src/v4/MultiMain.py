@@ -25,7 +25,7 @@ class SpeedyTester:
         print("The full path to my log files is at: {} ".format(self.file))
         st = speedtest.Speedtest()
         # print("Success" if res.success else " Failed")
-        print(st.download())
+        print("Speeds: ", st)
         wr = FM.generateOutSpeedObject(st)
         FM.printDataframeToFile(wr, self.file)\
 
