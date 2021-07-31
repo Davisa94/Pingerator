@@ -34,7 +34,7 @@ CREATE table speed (
     test_time_id BIGINT UNSIGNED NOT NULL,
     downspeed_value DOUBLE NULL,
     upspeed_value DOUBLE NULL,
-    CONSTRAINT test_time_id
+    CONSTRAINT test_time_id_speed
         FOREIGN KEY(test_time_id)
         REFERENCES testTime (id)
         ON DELETE RESTRICT
@@ -45,7 +45,7 @@ CREATE table pings (
     pingresponse_value FLOAT NULL,
     upspeed_value DOUBLE NULL,
     ipv4_id BIGINT UNSIGNED NOT NULL,
-    CONSTRAINT test_time_id
+    CONSTRAINT test_time_id_ping
         FOREIGN KEY(test_time_id)
         REFERENCES testTime (id)
         ON DELETE RESTRICT
