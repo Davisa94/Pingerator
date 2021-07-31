@@ -59,3 +59,7 @@ CREATE table pings (
     -- we need id of domain name given the appropriate IP
 
 
+-- ADD VALUES FOR THE IP TABLE:
+INSERT INTO `pingerator`.`iplookup` (`time_created`, `ipv4`, `domain_name`) VALUES (now(), '8.8.8.8', 'google.com');
+INSERT INTO `pingerator`.`iplookup` (`time_created`, `ipv4`, `domain_name`) VALUES (now(), '1.1.1.1', 'cloudflare.com');
+INSERT INTO `pingerator`.`iplookup` (`time_created`, `ipv4`, `domain_name`) VALUES (now(), '208.67.222.222', 'openDNS.com');
