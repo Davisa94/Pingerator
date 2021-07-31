@@ -24,27 +24,27 @@ CREATE table testTime(
     id SERIAL NOT NULL,
     datetime_tested TIMESTAMP NOT NULL,
     PRIMARY KEY(id),
-    UNIQUE(test_time_id));
+    UNIQUE(id));
 
 -- We need a table for the speeds
     -- test_time_id fk > testtime table
     -- we need speed value
     -- we need ip address
 CREATE table speed (
-    test_time_id INT NOT NULL,
+    test_time_id BIGINT UNSIGNED NOT NULL,
     downspeed_value DOUBLE NULL,
     upspeed_value DOUBLE NULL,
     CONSTRAINT test_time_id
         FOREIGN KEY(test_time_id)
-        REFERENCES testTime (test_time_id)
+        REFERENCES testTime (id)
         ON DELETE RESTRICT
         ON UPDATE RESTRICT);
 
 CREATE table pings (
-    test_time_id INT NOT NULL,
+    test_time_id BIGINT UNSIGNED NOT NULL,
     pingresponse_value FLOAT NULL,
     upspeed_value DOUBLE NULL,
-    ipv4_id INT NOT NULL,
+    ipv4_id BIGINT UNSIGNED NOT NULL,
     CONSTRAINT test_time_id
         FOREIGN KEY(test_time_id)
         REFERENCES testTime (id)
