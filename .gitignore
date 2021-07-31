@@ -15,4 +15,3 @@ src/switch2vars.py
 .vscode/settings.json
 src/v4/modules/__pycache__
 src/v6/backend/server/dbcredentials.json
-src/v6/backend/server/dbInteract.py
